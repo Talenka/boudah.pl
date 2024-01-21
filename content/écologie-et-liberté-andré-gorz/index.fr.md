@@ -16,7 +16,8 @@ toc = true
 
 <div class=articleImage itemprop=image itemscope itemtype="http://schema.org/ImageObject">
 
-<img src="ecologie-et-liberte.jpg" width=270 height=475 itemprop=url alt="Couverture du livre">
+<img src="{{ page.permalink | safe}}/ecologie-et-liberte.jpg" width=270 height=475 itemprop=url alt="Couverture du livre">
+
 <meta itemprop=width content=270>
 <meta itemprop=height content=475>
 </div>
