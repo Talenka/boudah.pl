@@ -1,7 +1,7 @@
 +++
 title = "Qu'est-ce que l'écologie sociale"
-description = "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
-date = 2021-05-19
+description = "Traduction du 1er chapitre de l'essaie politique de Murray Bookchin."
+date = 1982-05-19
 draft = false
 
 [taxonomies]
@@ -10,7 +10,6 @@ tags = ["Écologie","Sociologie","Textes"]
 [extra]
 keywords = "Écologie,Sociologie,Textes"
 authors = ["Murray Bookchin"]
-series = "Écologie"
 toc = true
 +++
 

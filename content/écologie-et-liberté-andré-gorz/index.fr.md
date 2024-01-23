@@ -10,7 +10,6 @@ tags = ["Écologie","Sociologie","Textes"]
 [extra]
 keywords = "Écologie,Sociologie,Textes"
 authors = ["André Gorz"]
-series = "Écologie"
 toc = true
 +++
 
