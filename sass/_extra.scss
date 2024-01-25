@@ -6,14 +6,43 @@
 	font-variant: small-caps;
 }
 
-article p {
-  text-indent: 2em;
-  text-align: justify;
-}
+article {
+  h2:target, h3:target, h4:target {
+    color: var(--a2);
+    text-decoration: underline;
+  }
 
-article p > a {
-  color: #049;
-  text-decoration: underline;
+  p {
+    text-indent: 2em;
+
+    a {
+      color: #049;
+      text-decoration: underline;
+    }
+  } 
+
+  p, li {
+    text-align: justify;
+  }
+
+
+  /* Lettrines */
+  h2 + p {text-indent: 0}
+  h2 + p::first-letter {
+    font-size: 4em;
+    float: left;
+    margin-right: 0.2em;
+    opacity: 0.75;
+  }
+
+  blockquote {
+    border-left: .4rem rgba(232, 186, 43, .3) solid;
+    background: rgba(232, 186, 43, 0.2);
+  }
+
+  q {
+    quotes: "“" "”" "‘" "’";
+  }
 }
 
 :root:not(.switch) {
@@ -23,40 +52,53 @@ article p > a {
 }
 
 
-/* Lettrines */
-article h2 + p {text-indent: 0}
-article h2 + p::first-letter {
-  font-size: 4em;
-  float: left;
-  margin-right: 0.2em;
-  opacity: 0.75;
-}
-
-article blockquote {
-  border-left: .4rem rgba(232, 186, 43, .3) solid;
-  background: rgba(232, 186, 43, 0.2);
-}
 
 .poem > p {
   text-indent: 0;
   text-align: left;
 }
 
-.footnote-definition {
-  padding-bottom: 1em;
+.footnote-reference {
+  padding-left: 1px;
 
-  :target {
-    background: rgba(255, 236, 96, .3);
+  a {
+    text-decoration: none;
+
+    &::before {
+      content: "[";
+    }
+
+    &::after {
+      content: "]";
+    }
+  }
+}
+
+
+.footnote-definition {
+  opacity: 0.8;
+
+  .footnote-definition-label {
+    &::before {
+      content: "[";
+    }
+
+    &::after {
+      content: "]";
+    }
+  }
+
+  &:target, &:hover {
+    opacity: 1;
+  }
+
+  &:target, &:hover {
+    background: rgba(255, 236, 96, .35);
   }
 
   p {
     font-size: 90%;
   }
-}
-
-
-article q {
-  quotes: "“" "”" "‘" "’";
 }
 
 a.tag {
@@ -67,11 +109,6 @@ a.tag {
   padding: 1px 3px;
   font-size: 90%;
   font-weight: normal;
-}
-
-h2:target, h3:target, h4:target {
-  color: var(--a2);
-  text-decoration: underline;
 }
 
 .articleImage img {
